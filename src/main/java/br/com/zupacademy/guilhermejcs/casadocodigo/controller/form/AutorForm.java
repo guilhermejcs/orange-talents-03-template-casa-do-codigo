@@ -9,11 +9,16 @@ import br.com.zupacademy.guilhermejcs.casadocodigo.model.Autor;
 
 public class AutorForm {
 	
-	@NotNull(message = "O campo nome não pode ser nulo") @NotEmpty(message = "O campo nome não pode ser vazio")
+	@NotNull(message = "O campo nome não pode ser nulo")
+	@NotEmpty(message = "O campo nome não pode ser vazio")
 	private String nome;
-	@NotNull(message = "O campo e-mail não pode ser nulo") @NotEmpty(message = "O campo e-mail não pode ser vazio") @Email(message = "E-mail inválido")
+	@NotNull(message = "O campo e-mail não pode ser nulo")
+	@NotEmpty(message = "O campo e-mail não pode ser vazio")
+	@Email(message = "E-mail inválido")
 	private String email;
-	@NotNull(message = "O campo descrição não pode ser nulo") @NotEmpty(message = "O campo descrição não pode ser vazio") @Size(max = 400, message = "O campo descrição não pode ter mais de 400 caracteres")
+	@NotNull(message = "O campo descrição não pode ser nulo")
+	@NotEmpty(message = "O campo descrição não pode ser vazio")
+	@Size(max = 400, message = "O campo descrição não pode ter mais de 400 caracteres")
 	private String descricao;
 	
 	public String getNome() {
